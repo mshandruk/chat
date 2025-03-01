@@ -9,6 +9,8 @@ void startClient(const char *address, uint16_t port);
 int main()
 {
     startClient("127.0.0.1", 12889);
+
+    return 0;
 }
 
 void startClient(const char *address, const uint16_t port)

@@ -1,16 +1,16 @@
 #ifndef CHATROOM_H
 #define CHATROOM_H
 
+#include <mutex>
 #include <string>
 #include <vector>
-#include <mutex>
 
 class ChatRoom
 {
 public:
-    void AddMessage(const std::string &message);
+    void addMessage(const std::string &message);
 
-    std::vector<std::string> GetMessages();
+    std::vector<std::string> getMessages();
 
 private:
     std::vector<std::string> messages_;
@@ -18,4 +18,4 @@ private:
 };
 
 
-#endif //CHATROOM_H
+#endif // CHATROOM_H

@@ -38,8 +38,7 @@ void handleClient(tcp::socket socket)
         while (true)
         {
             std::memset(data, 0, sizeof(data));
-            const size_t length = socket.read_some(buffer(data));
-            if (length > 0)
+            if (socket.read_some(buffer(data)) > 0)
             {
                 std::cout << "Received: " << data << std::endl;
                 write(socket, buffer("Message Received\n"));
